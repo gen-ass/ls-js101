@@ -103,12 +103,26 @@ Code
 
 let naturalNumbers = [...Array(100)].map((_, i) => i + 1);
 
+	// function printOddNumbers(numbers) {
+	// 	for (let i = 0; i < numbers.length; i++) {
+	// 		if (numbers[i] % 2 !== 0) {
+	// 			console.log(numbers[i]);
+	// 		}
+	// 	}
+	// }
+
+// function printOddNumbers(numbers) {
+//   numbers.forEach(number => {
+//     if (number % 2 !== 0) {
+//       console.log(number);
+//     }
+//   });
+// }
+
 function printOddNumbers(numbers) {
-	for (let i = 0; i < numbers.length; i++) {
-		if (numbers[i] % 2 !== 0) {
-			console.log(numbers[i]);
-		}
-	}
+  numbers.filter(number => number % 2 !== 0).forEach(number => console.log(number));
 }
 
+
 printOddNumbers(naturalNumbers);
+
