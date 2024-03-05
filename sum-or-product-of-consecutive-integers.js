@@ -58,7 +58,7 @@ let rlSync = require('readline-sync');
 
 // Nr 2
 let input = rlSync.question('Please enter a list of integers (as a single number, separated by spaces, or separated by commas):\n');
-
+let productSum = rlSync.question('Enter "s" to compute the sum, or "p" to compute the product.\n').toLowerCase();
 let integerRange;
 
 if (!isNaN(input)) {
@@ -77,8 +77,6 @@ if (integerRange.some(isNaN)) {
 } else {
     console.log(integerRange);
 }
-
-let productSum = rlSync.question('Enter "s" to compute the sum, or "p" to compute the product.\n').toLowerCase();
 
 function calculateSum(integerArray) {
 	return integerArray.reduce((sum, current) => sum + current, 0);
