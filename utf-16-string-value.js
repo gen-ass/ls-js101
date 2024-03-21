@@ -108,13 +108,15 @@ console.log(utf16StringSum(OMEGA + OMEGA + OMEGA));  // 2811
 
 // This will output 97000000, which is the sum of the UTF-16 code unit values of the characters in the string. 
 // The UTF-16 code unit value of the character 'a' is 97, so the sum for a string of one million 'a' characters is 97 * 1000000 = 97000000.
-// let longString = 'a'.repeat(1000000);
-// console.log(utf16StringSum(longString));  // 97000000
+let longString = 'a'.repeat(1000000);
+console.log(utf16StringSum(longString));  // 97000000
 
 // The character '𝌆' (U+1D306 TETRAGRAM FOR CENTRE) is outside the BMP and is represented as a surrogate pair in JavaScript.
 let TETRAGRAM = '𝌆';
-console.log(utf16StringSum(TETRAGRAM));  // 111410
+console.log(utf16StringSum(TETRAGRAM));  // 112442
 
 // Test case with special characters
 let specialCharsString = ' \t\n!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 console.log(utf16StringSum(specialCharsString));  // Outputs: 2137
+
+
